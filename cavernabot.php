@@ -88,7 +88,10 @@ function processaMensagem($message, $alfred) {
             $mensagem = "Pois não, patrão {$user}.";
         } else if ($intent[0] != '') {
             $mensagem = "Não entendi, patrão {$user}.";
+        }else if (strpos(strtolower($msg), 'feio') !== false) {
+            $mensagem = "Sua cara";
         }
+        
     }
     $replymarkup = false;
     if ($mensagem != "") {
